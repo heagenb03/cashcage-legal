@@ -6,28 +6,121 @@
   <title>Cash Cage — Legal</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: #f9f9f9; color: #1a1a1a; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 40px 24px; }
-    .card { background: #fff; border-radius: 16px; padding: 48px; max-width: 480px; width: 100%; text-align: center; box-shadow: 0 2px 16px rgba(0,0,0,0.08); }
-    .app-name { font-size: 28px; font-weight: 700; letter-spacing: 4px; color: #1a1a1a; margin-bottom: 6px; }
-    .divider { width: 36px; height: 3px; background: #B072BB; border-radius: 2px; margin: 12px auto 20px; }
-    .subtitle { font-size: 15px; color: #666; margin-bottom: 40px; }
-    .links { display: flex; flex-direction: column; gap: 14px; }
-    a.doc-link { display: block; padding: 16px 24px; background: #f4f4f4; border-radius: 12px; text-decoration: none; color: #1a1a1a; font-size: 15px; font-weight: 600; transition: background 0.15s; }
-    a.doc-link:hover { background: #ece6f0; color: #7a3d8a; }
-    .footer { margin-top: 40px; font-size: 12px; color: #aaa; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background: #0A0A0A;
+      color: #FFFFFF;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 24px;
+    }
+
+    .card {
+      background: #1A1A1A;
+      border-radius: 20px;
+      padding: 48px 40px;
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+      border: 1px solid rgba(176, 114, 187, 0.2);
+    }
+
+    .app-name {
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: 6px;
+      color: #FFFFFF;
+      margin-bottom: 10px;
+    }
+
+    .logo-divider {
+      width: 40px;
+      height: 3px;
+      background: #B072BB;
+      border-radius: 2px;
+      margin: 0 auto 14px;
+      box-shadow: 0 0 10px rgba(176, 114, 187, 0.7);
+    }
+
+    .subtitle {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.4);
+      margin-bottom: 40px;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    a.doc-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 20px;
+      background: #0A0A0A;
+      border-radius: 14px;
+      border: 1px solid #2A2A2A;
+      text-decoration: none;
+      color: #FFFFFF;
+      font-size: 15px;
+      font-weight: 600;
+      transition: border-color 0.15s, background 0.15s;
+    }
+
+    a.doc-link:hover {
+      border-color: rgba(176, 114, 187, 0.5);
+      background: rgba(176, 114, 187, 0.06);
+    }
+
+    .doc-link-arrow {
+      color: #B072BB;
+      font-size: 16px;
+      opacity: 0.8;
+    }
+
+    .footer {
+      margin-top: 36px;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.25);
+    }
+
+    .footer a {
+      color: rgba(176, 114, 187, 0.6);
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      color: #B072BB;
+    }
   </style>
 </head>
 <body>
   <div class="card">
     <div class="app-name">CASH CAGE</div>
-    <div class="divider"></div>
+    <div class="logo-divider"></div>
     <div class="subtitle">Legal Documents</div>
     <div class="links">
-      <a class="doc-link" href="privacy-policy.html">Privacy Policy</a>
-      <a class="doc-link" href="terms-of-service.html">Terms of Service</a>
+      <a class="doc-link" href="privacy-policy.html">
+        Privacy Policy
+        <span class="doc-link-arrow">›</span>
+      </a>
+      <a class="doc-link" href="terms-of-service.html">
+        Terms of Service
+        <span class="doc-link-arrow">›</span>
+      </a>
     </div>
     <div class="footer">
-      &copy; 2025 Heagen Bell &middot; <a href="mailto:cashcageapp@gmail.com" style="color:#aaa;">cashcageapp@gmail.com</a>
+      &copy; 2025 Heagen Bell &middot;
+      <a href="mailto:cashcageapp@gmail.com">cashcageapp@gmail.com</a>
     </div>
   </div>
 </body>

@@ -6,90 +6,244 @@
   <title>Privacy Policy — Cash Cage</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; background: #f9f9f9; color: #1a1a1a; padding: 40px 24px; line-height: 1.7; }
-    .container { max-width: 720px; margin: 0 auto; background: #fff; border-radius: 16px; padding: 48px; box-shadow: 0 2px 16px rgba(0,0,0,0.08); }
-    .back { display: inline-block; font-size: 13px; color: #B072BB; text-decoration: none; margin-bottom: 28px; font-weight: 600; }
-    .back:hover { text-decoration: underline; }
-    .app-name { font-size: 13px; font-weight: 700; letter-spacing: 3px; color: #B072BB; text-transform: uppercase; margin-bottom: 8px; }
-    h1 { font-size: 26px; font-weight: 700; color: #1a1a1a; margin-bottom: 6px; }
-    .effective { font-size: 13px; color: #888; margin-bottom: 36px; }
-    h2 { font-size: 17px; font-weight: 700; color: #1a1a1a; margin-top: 36px; margin-bottom: 10px; }
-    p { font-size: 15px; color: #333; margin-bottom: 14px; }
-    ul { font-size: 15px; color: #333; padding-left: 20px; margin-bottom: 14px; }
-    li { margin-bottom: 6px; }
-    a { color: #B072BB; }
-    .divider { width: 36px; height: 3px; background: #B072BB; border-radius: 2px; margin-bottom: 28px; }
-    .contact-box { background: #f4f4f4; border-radius: 12px; padding: 20px 24px; margin-top: 12px; }
-    .contact-box p { margin: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background: #0A0A0A;
+      color: #FFFFFF;
+      padding: 40px 24px 80px;
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #B072BB;
+      text-decoration: none;
+      margin-bottom: 32px;
+      opacity: 0.85;
+      transition: opacity 0.15s;
+    }
+
+    .back:hover { opacity: 1; }
+
+    .header {
+      margin-bottom: 40px;
+    }
+
+    .app-name {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: #B072BB;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 12px;
+      letter-spacing: -0.3px;
+    }
+
+    .logo-divider {
+      width: 36px;
+      height: 3px;
+      background: #B072BB;
+      border-radius: 2px;
+      margin-bottom: 16px;
+      box-shadow: 0 0 8px rgba(176, 114, 187, 0.6);
+    }
+
+    .effective {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.35);
+      font-weight: 500;
+      letter-spacing: 0.3px;
+    }
+
+    .card {
+      background: #1A1A1A;
+      border-radius: 16px;
+      padding: 28px 28px 24px;
+      border: 1px solid rgba(176, 114, 187, 0.15);
+      margin-bottom: 12px;
+    }
+
+    .section-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #B072BB;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      opacity: 0.8;
+    }
+
+    h2 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.75);
+      margin-bottom: 12px;
+      line-height: 1.7;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.75);
+      padding-left: 0;
+      list-style: none;
+      margin-bottom: 12px;
+    }
+
+    li {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    li::before {
+      content: "–";
+      color: #B072BB;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    li:last-child { margin-bottom: 0; }
+
+    strong { color: #FFFFFF; font-weight: 600; }
+
+    a { color: #B072BB; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .contact-card {
+      background: #0A0A0A;
+      border-radius: 12px;
+      padding: 20px 20px;
+      border: 1px solid #2A2A2A;
+    }
+
+    .contact-card p {
+      margin: 0;
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.65);
+      line-height: 1.8;
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <a class="back" href="index.html">← Back</a>
-    <div class="app-name">Cash Cage</div>
-    <h1>Privacy Policy</h1>
-    <div class="divider"></div>
-    <p class="effective">Effective date: March 13, 2025 &nbsp;&middot;&nbsp; Last updated: March 13, 2025</p>
+    <a class="back" href="index.html">‹ Back</a>
 
-    <p>This Privacy Policy describes how Heagen Bell ("we," "us," or "our") collects, uses, and protects your information when you use the Cash Cage mobile application ("App"). By using the App, you agree to the practices described in this policy.</p>
+    <div class="header">
+      <div class="app-name">Cash Cage</div>
+      <h1>Privacy Policy</h1>
+      <div class="logo-divider"></div>
+      <div class="effective">Effective date: March 13, 2025 &nbsp;&middot;&nbsp; Last updated: March 13, 2025</div>
+    </div>
 
-    <h2>1. Information We Collect</h2>
-    <p>We collect only the information necessary to provide the App's features:</p>
-    <ul>
-      <li><strong>Account information:</strong> When you create an account, we collect your display name and email address.</li>
-      <li><strong>Authentication data:</strong> If you sign in with Google or Apple, we receive a verified email address and display name from those providers. We do not receive your Google or Apple passwords.</li>
-      <li><strong>Game data:</strong> Poker session data you create in the App (player names, buy-in and cash-out amounts, game titles, timestamps).</li>
-      <li><strong>Subscription and purchase data:</strong> If you purchase a subscription or one-time upgrade, RevenueCat (our payment processor) handles the transaction and shares your subscription status with us. We do not store your payment card information.</li>
-      <li><strong>Device information:</strong> Basic device identifiers may be collected by third-party services (Firebase, RevenueCat) for analytics and fraud prevention purposes, as described in their respective privacy policies.</li>
-    </ul>
+    <div class="card">
+      <p>This Privacy Policy describes how Heagen Bell ("we," "us," or "our") collects, uses, and protects your information when you use the Cash Cage mobile application ("App"). By using the App, you agree to the practices described in this policy.</p>
+    </div>
 
-    <h2>2. How We Use Your Information</h2>
-    <ul>
-      <li>To create and authenticate your account.</li>
-      <li>To sync your game data across your devices.</li>
-      <li>To process in-app purchases and manage your subscription status.</li>
-      <li>To send email verification messages and password reset emails.</li>
-      <li>To respond to your support requests.</li>
-    </ul>
-    <p>We do not use your data for advertising, and we do not sell your personal information to third parties.</p>
+    <div class="card">
+      <h2>1. Information We Collect</h2>
+      <p>We collect only the information necessary to provide the App's features:</p>
+      <ul>
+        <li><strong>Account information:</strong> When you create an account, we collect your display name and email address.</li>
+        <li><strong>Authentication data:</strong> If you sign in with Google or Apple, we receive a verified email address and display name from those providers. We do not receive your Google or Apple passwords.</li>
+        <li><strong>Game data:</strong> Poker session data you create in the App (player names, buy-in and cash-out amounts, game titles, timestamps).</li>
+        <li><strong>Subscription and purchase data:</strong> If you purchase a subscription or one-time upgrade, RevenueCat (our payment processor) handles the transaction and shares your subscription status with us. We do not store your payment card information.</li>
+        <li><strong>Device information:</strong> Basic device identifiers may be collected by third-party services (Firebase, RevenueCat) for analytics and fraud prevention purposes, as described in their respective privacy policies.</li>
+      </ul>
+    </div>
 
-    <h2>3. Third-Party Services</h2>
-    <p>The App uses the following third-party services that may collect and process data under their own privacy policies:</p>
-    <ul>
-      <li><strong>Google Firebase</strong> (authentication, cloud database, cloud functions) — <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy</a></li>
-      <li><strong>RevenueCat</strong> (in-app purchase management) — <a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat Privacy Policy</a></li>
-      <li><strong>Google Sign-In</strong> — governed by <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a></li>
-      <li><strong>Sign in with Apple</strong> — governed by <a href="https://www.apple.com/legal/privacy/" target="_blank">Apple's Privacy Policy</a></li>
-    </ul>
+    <div class="card">
+      <h2>2. How We Use Your Information</h2>
+      <ul>
+        <li>To create and authenticate your account.</li>
+        <li>To sync your game data across your devices.</li>
+        <li>To process in-app purchases and manage your subscription status.</li>
+        <li>To send email verification messages and password reset emails.</li>
+        <li>To respond to your support requests.</li>
+      </ul>
+      <p>We do not use your data for advertising, and we do not sell your personal information to third parties.</p>
+    </div>
 
-    <h2>4. Data Storage and Security</h2>
-    <p>Your account and game data are stored in Google Cloud (Firebase Firestore) with industry-standard encryption in transit (TLS) and at rest. Access to your data is restricted to your account only, enforced by Firestore security rules.</p>
-    <p>Game data is also stored locally on your device using encrypted device storage. Local data is not accessible to other apps on your device.</p>
+    <div class="card">
+      <h2>3. Third-Party Services</h2>
+      <p>The App uses the following third-party services that may collect and process data under their own privacy policies:</p>
+      <ul>
+        <li><strong>Google Firebase</strong> (authentication, cloud database, cloud functions) — <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy</a></li>
+        <li><strong>RevenueCat</strong> (in-app purchase management) — <a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat Privacy Policy</a></li>
+        <li><strong>Google Sign-In</strong> — governed by <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a></li>
+        <li><strong>Sign in with Apple</strong> — governed by <a href="https://www.apple.com/legal/privacy/" target="_blank">Apple's Privacy Policy</a></li>
+      </ul>
+    </div>
 
-    <h2>5. Data Retention</h2>
-    <p>We retain your data for as long as your account exists. If you delete your account, all of your data (account information and game history) is permanently deleted from our servers within a reasonable period. This deletion is irreversible.</p>
+    <div class="card">
+      <h2>4. Data Storage and Security</h2>
+      <p>Your account and game data are stored in Google Cloud (Firebase Firestore) with industry-standard encryption in transit (TLS) and at rest. Access to your data is restricted to your account only, enforced by Firestore security rules.</p>
+      <p>Game data is also stored locally on your device using encrypted device storage. Local data is not accessible to other apps on your device.</p>
+    </div>
 
-    <h2>6. Account Deletion</h2>
-    <p>You can delete your account at any time from within the App: go to <strong>Profile → Settings → Delete Account</strong>. Deleting your account permanently removes all associated data from our servers. Active subscriptions must be cancelled separately through the App Store (iOS) or Google Play (Android).</p>
+    <div class="card">
+      <h2>5. Data Retention</h2>
+      <p>We retain your data for as long as your account exists. If you delete your account, all of your data (account information and game history) is permanently deleted from our servers within a reasonable period. This deletion is irreversible.</p>
+    </div>
 
-    <h2>7. Children's Privacy</h2>
-    <p>The App is not directed to children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe a child under 13 has provided us with personal information, please contact us and we will delete it promptly.</p>
+    <div class="card">
+      <h2>6. Account Deletion</h2>
+      <p>You can delete your account at any time from within the App: go to <strong>Profile → Settings → Delete Account</strong>. Deleting your account permanently removes all associated data from our servers. Active subscriptions must be cancelled separately through the App Store (iOS) or Google Play (Android).</p>
+    </div>
 
-    <h2>8. Your Rights</h2>
-    <p>Depending on your location, you may have rights regarding your personal data, including the right to access, correct, or delete your data. To exercise these rights, contact us using the information below or use the in-app account deletion feature.</p>
+    <div class="card">
+      <h2>7. Children's Privacy</h2>
+      <p>The App is not directed to children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe a child under 13 has provided us with personal information, please contact us and we will delete it promptly.</p>
+    </div>
 
-    <h2>9. Real Money Disclaimer</h2>
-    <p>Cash Cage is a record-keeping tool for tracking poker buy-ins and cash-outs among friends. The App does not facilitate gambling, process real-money wagers, or hold funds on your behalf. All monetary values entered are for tracking purposes only.</p>
+    <div class="card">
+      <h2>8. Your Rights</h2>
+      <p>Depending on your location, you may have rights regarding your personal data, including the right to access, correct, or delete your data. To exercise these rights, contact us using the information below or use the in-app account deletion feature.</p>
+    </div>
 
-    <h2>10. Changes to This Policy</h2>
-    <p>We may update this Privacy Policy from time to time. We will update the "Last updated" date at the top of this page when we do. Continued use of the App after changes constitutes your acceptance of the updated policy.</p>
+    <div class="card">
+      <h2>9. Real Money Disclaimer</h2>
+      <p>Cash Cage is a record-keeping tool for tracking poker buy-ins and cash-outs among friends. The App does not facilitate gambling, process real-money wagers, or hold funds on your behalf. All monetary values entered are for tracking purposes only.</p>
+    </div>
 
-    <h2>11. Contact Us</h2>
-    <div class="contact-box">
-      <p>If you have questions or concerns about this Privacy Policy, please contact us at:<br /><br />
-      <strong>Heagen Bell</strong><br />
-      <a href="mailto:cashcageapp@gmail.com">cashcageapp@gmail.com</a>
-      </p>
+    <div class="card">
+      <h2>10. Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. We will update the "Last updated" date at the top of this page when we do. Continued use of the App after changes constitutes your acceptance of the updated policy.</p>
+    </div>
+
+    <div class="card">
+      <h2>11. Contact Us</h2>
+      <div class="contact-card">
+        <p>If you have questions or concerns about this Privacy Policy, please contact us at:<br /><br />
+        <strong>Heagen Bell</strong><br />
+        <a href="mailto:cashcageapp@gmail.com">cashcageapp@gmail.com</a>
+        </p>
+      </div>
     </div>
   </div>
 </body>
