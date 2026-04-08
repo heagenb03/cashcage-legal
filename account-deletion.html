@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Account Deletion — Cash Cage</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background: #0A0A0A;
+      color: #FFFFFF;
+      padding: 40px 24px 80px;
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #B072BB;
+      text-decoration: none;
+      margin-bottom: 32px;
+      opacity: 0.85;
+      transition: opacity 0.15s;
+    }
+
+    .back:hover { opacity: 1; }
+
+    .header {
+      margin-bottom: 40px;
+    }
+
+    .app-name {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: #B072BB;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 12px;
+      letter-spacing: -0.3px;
+    }
+
+    .logo-divider {
+      width: 36px;
+      height: 3px;
+      background: #B072BB;
+      border-radius: 2px;
+      margin-bottom: 16px;
+      box-shadow: 0 0 8px rgba(176, 114, 187, 0.6);
+    }
+
+    .subtitle {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.35);
+      font-weight: 500;
+      letter-spacing: 0.3px;
+    }
+
+    .card {
+      background: #1A1A1A;
+      border-radius: 16px;
+      padding: 28px 28px 24px;
+      border: 1px solid rgba(176, 114, 187, 0.15);
+      margin-bottom: 12px;
+    }
+
+    .card.danger {
+      border-color: rgba(255, 59, 92, 0.25);
+    }
+
+    .section-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #B072BB;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      opacity: 0.8;
+    }
+
+    h2 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.75);
+      margin-bottom: 12px;
+      line-height: 1.7;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    ol {
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.75);
+      padding-left: 0;
+      list-style: none;
+      counter-reset: steps;
+      margin-bottom: 0;
+    }
+
+    ol li {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 16px;
+      line-height: 1.6;
+      counter-increment: steps;
+      align-items: flex-start;
+    }
+
+    ol li:last-child { margin-bottom: 0; }
+
+    ol li::before {
+      content: counter(steps);
+      background: #B072BB;
+      color: #FFFFFF;
+      font-size: 11px;
+      font-weight: 700;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    ul {
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.75);
+      padding-left: 0;
+      list-style: none;
+      margin-bottom: 0;
+    }
+
+    ul li {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    ul li::before {
+      content: "–";
+      color: #FF3B5C;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    ul li:last-child { margin-bottom: 0; }
+
+    strong { color: #FFFFFF; font-weight: 600; }
+
+    a { color: #B072BB; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .warning-box {
+      background: rgba(255, 59, 92, 0.08);
+      border-radius: 12px;
+      padding: 16px 18px;
+      border: 1px solid rgba(255, 59, 92, 0.2);
+      margin-bottom: 12px;
+    }
+
+    .warning-box p {
+      margin: 0;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .warning-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #FF3B5C;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .contact-card {
+      background: #0A0A0A;
+      border-radius: 12px;
+      padding: 20px 20px;
+      border: 1px solid #2A2A2A;
+    }
+
+    .contact-card p {
+      margin: 0;
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.65);
+      line-height: 1.8;
+    }
+
+    .step-text { flex: 1; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a class="back" href="index.html">‹ Back</a>
+
+    <div class="header">
+      <div class="app-name">Cash Cage</div>
+      <h1>Account Deletion</h1>
+      <div class="logo-divider"></div>
+      <div class="subtitle">How to delete your account and all associated data</div>
+    </div>
+
+    <div class="card">
+      <p>You can delete your Cash Cage account at any time directly from within the app. Deletion is immediate and permanent — no data is retained after your account is removed.</p>
+    </div>
+
+    <div class="warning-box">
+      <div class="warning-label">Before you proceed</div>
+      <p>Account deletion is <strong>irreversible</strong>. All game history, player data, and account information will be permanently deleted and cannot be recovered.</p>
+    </div>
+
+    <div class="card">
+      <h2>How to Delete Your Account</h2>
+      <ol>
+        <li>
+          <span class="step-text">Open the <strong>Cash Cage</strong> app on your device.</span>
+        </li>
+        <li>
+          <span class="step-text">Tap the <strong>Profile</strong> tab at the bottom of the screen.</span>
+        </li>
+        <li>
+          <span class="step-text">Tap <strong>Settings</strong>.</span>
+        </li>
+        <li>
+          <span class="step-text">Scroll down to the <strong>Account</strong> section.</span>
+        </li>
+        <li>
+          <span class="step-text">Tap <strong>Delete Account</strong>.</span>
+        </li>
+        <li>
+          <span class="step-text">Follow the 2-step confirmation to permanently delete your account.</span>
+        </li>
+      </ol>
+    </div>
+
+    <div class="card danger">
+      <h2>What Gets Deleted</h2>
+      <ul>
+        <li>Your account profile (display name, email address)</li>
+        <li>All game sessions and history</li>
+        <li>All player records and transaction data</li>
+        <li>All data stored in Firebase and Firestore</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Subscriptions</h2>
+      <p>Deleting your account does <strong>not</strong> automatically cancel an active subscription. To avoid future charges, cancel your subscription separately before deleting your account:</p>
+      <ul>
+        <li><strong>iOS:</strong> Cancel through <strong>App Store → Subscriptions</strong>.</li>
+        <li><strong>Android:</strong> Cancel through <strong>Google Play → Subscriptions</strong>.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Need Help?</h2>
+      <p>If you are unable to access the app or need assistance deleting your account, contact us and we will process the deletion manually.</p>
+      <div class="contact-card">
+        <p>
+          <strong>Heagen Bell</strong><br />
+          <a href="mailto:cashcageapp@gmail.com">cashcageapp@gmail.com</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
